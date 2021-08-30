@@ -9,7 +9,7 @@ import {
 export default function Pedido ({dishes, drinks, desserts, total, esconderEsconderPedido, esconder}) {
     return (
     <div className={esconderEsconderPedido}>
-    <p className="secao secao-revisar">Revise seu pedido</p>
+    <p className="secao-revisar">Revise seu pedido</p>
     <div class="confirmacao-pedido">
       <div class="itens">
         {dishes.filter((dishe) => dishe.qtd !== 0).map((dishe, index) => <RenderizarPedido pedido={dishe} total={total} key={index}/>)}

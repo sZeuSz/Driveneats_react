@@ -29,7 +29,6 @@ function Dessert ({dessert, ativar}) {
     dessert.qtd = 0;
   }
   function plus () {
-      console.log("aqui")
       setContador(contador + 1);
       dessert.qtd += 1;
       ativar();

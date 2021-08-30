@@ -11,7 +11,6 @@ function Dishe ({dishe, ativar}) {
     const [selecionado, setSelecionado] = React.useState("");
     const [aparecer, setAparecer] = React.useState("none");
     const [contador, setContador] = React.useState(0);
-    {console.log(dishe.qtd)}
 
     function selecionar() {
         if (selecionado === "") {

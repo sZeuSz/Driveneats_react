@@ -3,7 +3,7 @@ import React from 'react'
 export default function Drinks ({drinks, ativar}) {
 
     return (
-      <div class="bebidas">
+      <div className="bebidas">
         {drinks.map((drink, index) => <Drink key={index} drink={drink} ativar={ativar}/>)}
       </div>
     )
@@ -46,12 +46,12 @@ function Drink ({drink, ativar}) {
     ativar();
   }
   return (
-    <div class={`bebida ${selecionada}`} onClick={selecionar}>
+    <div className={`bebida ${selecionada}`} onClick={selecionar}>
       <img src={drink.img} alt="imagem-referente-ao-drink"/>
-      <div class="informacoes">
-        <p class="nome-produto"> {drink.nome} </p>
-        <p class="descricao-produto">{drink.descricao}</p>
-        <p class="preco">R$ {drink.preco}</p>
+      <div className="informacoes">
+        <p className="nome-produto"> {drink.nome} </p>
+        <p className="descricao-produto">{drink.descricao}</p>
+        <p className="preco">R$ {drink.preco}</p>
         <div className={`operations ${aparecer}`}> 
           <div className="plus">
               <ion-icon onClick={plus} name="add-outline"></ion-icon>

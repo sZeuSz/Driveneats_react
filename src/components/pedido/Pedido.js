@@ -10,23 +10,23 @@ export default function Pedido ({dishes, drinks, desserts, total, esconderEscond
     return (
     <div className={esconderEsconderPedido}>
     <p className="secao-revisar">Revise seu pedido</p>
-    <div class="confirmacao-pedido">
-      <div class="itens">
+    <div className="confirmacao-pedido">
+      <div className="itens">
         {dishes.filter((dishe) => dishe.qtd !== 0).map((dishe, index) => <RenderizarPedido pedido={dishe} total={total} key={index}/>)}
         {drinks.filter((drink) => drink.qtd !== 0).map((drink, index) => <RenderizarPedido pedido={drink} total={total} key={index}/>)}
         {desserts.filter((dessert) => dessert.qtd !== 0).map((dessert, index) => <RenderizarPedido pedido={dessert} total={total} key={index}/>)}
-        <div class="preco-total nome-preco-tres aviso">
+        <div className="preco-total nome-preco-tres aviso">
           <p>TOTAL</p>
           <p>R$ {total()}</p>
         </div>
       </div>
     </div>
-    <div class="confirmar aviso" onClick={()=>Encaminhar(dishes, drinks, desserts, total)}>
+    <div className="confirmar aviso" onClick={()=>Encaminhar(dishes, drinks, desserts, total)}>
         <p>Tudo certo, pode pedir!</p>
       </div>
       <Router>
           <Link to="/">
-            <div class="cancelar confirmar">
+            <div className="cancelar confirmar">
               <p onClick={esconder}>Cancelar</p>
             </div>
           </Link>
@@ -37,8 +37,8 @@ export default function Pedido ({dishes, drinks, desserts, total, esconderEscond
 
 function RenderizarPedido ({pedido}) {
     return (
-        <div class="nome-preco-um preco">
-          <p class="flango">{pedido.nome} {(pedido.qtd > 1) ? `(${pedido.qtd}x)` : ``}</p>
+        <div className="nome-preco-um preco">
+          <p className="flango">{pedido.nome} {(pedido.qtd > 1) ? `(${pedido.qtd}x)` : ``}</p>
           <p>{pedido.preco}</p>
         </div>
     )

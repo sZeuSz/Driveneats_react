@@ -134,7 +134,7 @@ export default function App () {
         }
     }
     return (
-        <div className="transparente">
+        <div>
             <Header />
             <div className={`conteudo ${escondido}`}>
                 <p className="secao">Primeiro, seu prato</p>

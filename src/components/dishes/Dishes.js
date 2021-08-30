@@ -2,7 +2,7 @@ import React from 'react'
  
 export default function Dishes ({dishes, ativar}) {
     return (    
-        <div class="pratos">
+        <div className="pratos">
             {dishes.map((dishe, index) => <Dishe key={index} dishe={dishe} ativar={ativar}/>)}
         </div>
     )

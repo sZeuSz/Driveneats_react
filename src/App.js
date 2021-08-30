@@ -103,7 +103,7 @@ const desserts = [
         qtd: 0,
     }
 ]
-export default function App ({Routes}) {
+export default function App () {
     const [ativado, setAtivado] = React.useState("desativado");
     const [mensagem, setMensagem] = React.useState("Selecione os 3 itens para fechar o pedido")
     const [escondido, setEscondido] = React.useState("");
@@ -135,7 +135,6 @@ export default function App ({Routes}) {
     }
     return (
         <div className="transparente">
-            {Routes}
             <Header />
             <div className={`conteudo ${escondido}`}>
                 <p className="secao">Primeiro, seu prato</p>

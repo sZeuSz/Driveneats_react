@@ -1,6 +1,6 @@
 import './Header.css'
 
-export default function Topo () {
+export default function Header () {
 
     return (
         <div class="topo">

@@ -1,6 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');    
 
+*{
+    box-sizing: border-box;
+}
 body{
-    background-color: blue;
+    background-color: #EEEEEE;
+}
+.su-miu{
+    display: none !important;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+a {
+  text-decoration: none;
+}
+.barra-fim-fixa{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 91px;
+    width: 100vw;
+    background-color: #FFFFFF;
+    z-index: 1;
+  }
+  
+  .texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 61px;
+    width: calc(100vw - 40px);
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .descricao{
+    width: 60%;
+  }
+
+  .ativar {
+    background-color: #32B72F
+  }
+
+  .desativado {
+    pointer-events: none;
+  }
+
+
+  .conteudo{
+    margin-top:calc(92px + 34px);
+    margin-left: 20px;
+    margin-bottom: 112px;
+  }
+  .secao{
+    margin-top: 30px;
+    font-size: 26px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    color: #333333;
+  }
+  .prato img, 
+  .bebida img, 
+  .sobremesa img{
+    width: 144px;
+    height: 87px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+.pratos, 
+.bebidas,
+.sobremesas{
+  display: flex;
+  width: 100%;
+  height: 216px;
+  background-color: #EEEEEE;
+  overflow-x: scroll;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+
+.selecionado {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F; 
+}
+
+.operations {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* background-color: blue; */
+  height: 20px;
+}
+.none {
+  opacity: 0;
+}
+.minus {
+  color: red;
+}
+.plus {
+  color: green;
+}
+
+
+.informacoes{
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.prato,
+.bebida,
+.sobremesa{
+  height: 100%;
+  width: 172px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 9px;
+  margin: 0px 8px;
+} 
+
+.nome-produto{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.descricao-produto{
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color:#A6A6A6;
+  margin: 10px 0 10px 0;
+}
+.preco{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 5px;
 }
